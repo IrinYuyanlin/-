@@ -1,0 +1,8 @@
+此处提供了5篇主要的参考文献。为了提取细胞荧光图像的特征，可以进行全图像计算或者分割单细胞后进行计算。
+“Four-Color Theorem and Level Set Methods for Watershed segmentation”，
+“Segmentation and Shape Tracking of Whole Fluorescent Cells Based on the Chan-Vese Model”，
+“A Robust Algorithm for Segmenting and Tracking Clustered Cells in Time-Lapse Fluorescent Microscopy”
+三篇论文主要讨论了基于变分方法的细胞图像分割问题；
+“A neural network classifier capable of recognizing the patterns of all major subcellular structures in fluorescence microscope images of HeLa cells”，
+“Protein subcellular localization of fluorescence imagery using spatial and transform domain features”两篇文章主要讨论了荧光纹理特征的问题。
+请两位同学根据这些文献进行扩展调研，分别就细胞图像的分割和细胞内荧光纹理特征的提取问题完成讨论课，并在讨论课的最后，给出大作业期望开展的方法框架。
