@@ -60,22 +60,27 @@ figure(2); title('original contour');
 contour(phi0, [0 0], 'b');
 
 for iter = 1:num_iters
+    % find the pixels both inside and outside the curve.
     idx_outside = find(phi0 > 0);
     idx_inside = find(phi0 <= 0);
     
+    % get the average value.
     c_outside = sum(sum(im(idx_outside))) / (length(idx_outside)+eps);
     c_inside = sum(sum(im(idx_inside))) / (length(idx_inside)+eps);
     
+    % set the coefficients
     lambda1 = 1;
     lambda2 = 1;
     
     var_outside = lambda1*(im-c_outside).^2;
     var_inside = lambda2*(im-c_inside).^2;
     
+    % curvature
     kapa = kappa(phi0, 'formula');
     force = mu*kapa/max(max(abs(kapa))) + var_inside - var_outside;
     force = force / max(max(abs(force)));
     
+    % update the value
     phi0 = phi0 + delta*force;
     showcontour(im, phi0, iter);
     seg = phi0 <= 0;
